@@ -49,7 +49,7 @@
 	text-align: center;
   }
   
-  h2 {
+  h3, h4 {
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 18px;
@@ -58,7 +58,7 @@
 	margin: 0;
   }
   
-  h3 {
+  h2 {
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 24px;
@@ -310,6 +310,8 @@
 	z-index: 2;
   }
   
+
+
   .trends-title {
 	text-align: center;
 	margin-top: 64px;
@@ -332,13 +334,13 @@
   }
   
   .trends-posts-container {
-	display: block;
+	display: flex;
 	margin-top: 44px;
   }
   
   .trend {
 	display: flex;
-	width: 100%;
+	width: calc(25% - 4px);;
 	height: 321px;
 	align-items: flex-end;
 	justify-content: center;
@@ -711,23 +713,24 @@
   }
   
   .products {
+	display: flex;
+	flex-direction: row;
 	padding: 0 20px;
 	flex-grow: 1;
 	flex-shrink: 1;
   }
   
   .product {
-	max-width: 300px;
+	width: calc(100%/3 - 44px);
+	margin-top: 22px;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	margin: 0 auto;
   }
   
   .product-picture {
 	width: 100%;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+  	padding: 0 20px;
+  	margin-bottom: -35px;
   }
   
   .product-picture-link {
@@ -735,13 +738,9 @@
   }
   
   .product-info {
-	border: 3px solid #b59f5b;
-	margin-top: -30px;
-	margin-left: -20px;
-	margin-right: -20px;
-	padding: 55px 20px 20px;
-	max-width: 340px;
-	flex-grow: 1;
+	padding: 45px 20px 25px 20px;
+  	flex-grow: 1;
+  	border: 3px solid rgba(181, 159, 91, .6);
   }
   
   .product-title {
@@ -788,6 +787,7 @@
 	font-size: 14px;
 	text-transform: uppercase;
   }
+
 
   footer {
 	width: 100%;
@@ -1005,7 +1005,7 @@
 	.aside {
 	max-width: 272px;
 	margin-right: 0;
-	margin-left: 15px;
+	margin-left: 30px;
 	padding: 0;
 	box-sizing: border-box;
 	}
@@ -1016,7 +1016,6 @@
 	
 
 	.trend {
-	  width: 49%;
 	  margin: 3px 3px;
 	}
   
@@ -1033,20 +1032,20 @@
 
 	.page-content {
 	  flex-direction: row;
+	  padding-left: 34px;
+	  padding-right: 34px;
 	}
 
 	.products {
 	  display: flex;
-	  flex-wrap: wrap;
+	  flex-wrap: nowrap;
 	  justify-content: space-between;
 	  background-color: inherit;
 	  max-width: 1200px;
 	  margin: 0 auto;
 	}
+
   
-	.product {
-	  margin: 0 4% 15px;
-	}
   }
   
   @media (min-width: 1200px) {
@@ -1135,6 +1134,14 @@
 		display: flex;
 		flex-direction: column;
 	}
+
+	.page {
+		max-width: 640px;
+		padding: 42px, 15px, 0;
+		flex-wrap: wrap;
+	}
+
+	
 }
 
 @media (max-width:640px) and (orientation: landscape){
